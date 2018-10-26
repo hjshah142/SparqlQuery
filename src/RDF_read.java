@@ -27,9 +27,10 @@ public class RDF_read extends Object {
         }
         
         // read the RDF/XML file
-//        model.read(in, "");
+//        model.read(in, "TURTLE");
+        model.read("file_1.ttl") ;
                     
         // write it to standard out
-        model.write(System.out);            
+     model.write(System.out);            
     }
 }
