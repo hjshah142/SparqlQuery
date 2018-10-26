@@ -15,7 +15,7 @@ public class RDF_read extends Object {
         class, must be added to the class-path when running this and
         subsequent examples.
     */    
-    static final String inputFileName  = "vc-db-1.rdf";
+    static final String inputFileName  = "file_1.ttl";
                               
     public static void main (String args[]) {
         // create an empty model
@@ -27,7 +27,7 @@ public class RDF_read extends Object {
         }
         
         // read the RDF/XML file
-        model.read(in, "");
+//        model.read(in, "");
                     
         // write it to standard out
         model.write(System.out);            
