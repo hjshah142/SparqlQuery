@@ -2,6 +2,7 @@
 
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.util.FileManager;
+import org.apache.log4j.BasicConfigurator;
 
 import java.io.*;
 
@@ -18,6 +19,7 @@ public class RDF_read extends Object {
     static final String inputFileName  = "file_1.ttl";
                               
     public static void main (String args[]) {
+    	BasicConfigurator.configure();
         // create an empty model
         Model model = ModelFactory.createDefaultModel();
 
@@ -27,6 +29,7 @@ public class RDF_read extends Object {
         }
         
         // read the RDF/XML file
+//         read() method call is the URI which will be used for resolving relative URI's
 //        model.read(in, "TURTLE");
         model.read(inputFileName) ;
                     
