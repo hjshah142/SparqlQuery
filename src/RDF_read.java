@@ -6,14 +6,13 @@ import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
+import org.apache.jena.query.ResultSetFormatter;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.util.FileManager;
 import org.apache.log4j.BasicConfigurator;
 
 import java.io.*;
 
-/** Tutorial 5 - read RDF XML from a file and write it to standard out
- */
 public class RDF_read extends Object {
 
     /**
@@ -22,7 +21,8 @@ public class RDF_read extends Object {
         class, must be added to the class-path when running this and
         subsequent examples.
     */    
-    static final String inputFileName  = "file_1.ttl";
+//    static final String inputFileName  = "file_1.ttl";
+    static final String inputFileName  = "vc-db-1.rdf";
                               
     public static void main (String args[]) {
     	BasicConfigurator.configure();
@@ -41,10 +41,17 @@ public class RDF_read extends Object {
         
 //      to run in command line sparql.bat --data=vc-db-1.rdf --query=q1.rq               
         // write it to standard outString queryString = " .... " ;
-        String queryString = "....";
+		String queryString = 
+				
+			    "SELECT ?x ?name" +
+			    "WHERE {" +
+			    " ?x <http://www.w3.org/2001/vcard-rdf/3.0#FN> ?name " +
+			    "      }";
+			 
         Query query = QueryFactory.create(queryString) ;
          
-        try (QueryExecution qexec = QueryExecutionFactory.create(query, model)) {
+        try (QueryExecution qexec = QueryExecutionFactory.create(query, model)) 
+        {
         	
           ResultSet results = qexec.execSelect() ;
           for ( ; results.hasNext() ; )
@@ -55,6 +62,7 @@ public class RDF_read extends Object {
             Literal l = soln.getLiteral("VarL") ;   // Get a result variable - must be a literal
           }
         }
-     model.write(System.out,"TURTLE");            
+     model.write(System.out,"TURTLE"); 
+
     }
 }
