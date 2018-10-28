@@ -1,5 +1,11 @@
 
 
+import org.apache.jena.query.Query;
+import org.apache.jena.query.QueryExecution;
+import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.query.QueryFactory;
+import org.apache.jena.query.QuerySolution;
+import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.util.FileManager;
 import org.apache.log4j.BasicConfigurator;
@@ -32,8 +38,23 @@ public class RDF_read extends Object {
 //         read() method call is the URI which will be used for resolving relative URI's
 //        model.read(in, "TURTLE");
         model.read(inputFileName) ;
+        
                     
-        // write it to standard out
-     model.write(System.out);            
+        // write it to standard outString queryString = " .... " ;
+        String queryString = "....";
+        Query query = QueryFactory.create(queryString) ;
+         
+        try (QueryExecution qexec = QueryExecutionFactory.create(query, model)) {
+        	
+          ResultSet results = qexec.execSelect() ;
+          for ( ; results.hasNext() ; )
+          {
+            QuerySolution soln = results.nextSolution() ;
+            RDFNode x = soln.get("varName") ;       // Get a result variable by name.
+            Resource r = soln.getResource("VarR") ; // Get a result variable - must be a resource
+            Literal l = soln.getLiteral("VarL") ;   // Get a result variable - must be a literal
+          }
+        }
+     model.write(System.out,"TURTLE");            
     }
 }
