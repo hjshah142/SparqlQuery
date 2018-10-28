@@ -39,7 +39,7 @@ public class RDF_read extends Object {
 //        model.read(in, "TURTLE");
         model.read(inputFileName) ;
         
-                    
+//      to run in command line sparql.bat --data=vc-db-1.rdf --query=q1.rq               
         // write it to standard outString queryString = " .... " ;
         String queryString = "....";
         Query query = QueryFactory.create(queryString) ;
