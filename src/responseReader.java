@@ -28,6 +28,8 @@ public class  responseReader extends Object {
     	BasicConfigurator.configure();
         // create an empty model
         Model model = ModelFactory.createDefaultModel();
+        Model model2 = ModelFactory.createDefaultModel();
+        
 
         InputStream in = FileManager.get().open( inputFileName );
         if (in == null) {
@@ -38,6 +40,7 @@ public class  responseReader extends Object {
 //         read() method call is the URI which will be used for resolving relative URI's
 //        model.read(in, "TURTLE");
         model.read(inputFileName) ;
+        model2.read("extractor2227response.ttl");
         
 //      to run in command line sparql.bat --data=vc-db-1.rdf --query=q1.rq               
         // write it to standard outString queryString = " .... " ;
@@ -64,6 +67,8 @@ public class  responseReader extends Object {
 //        }
         System.out.println("   Response after rdf read");
      model.write(System.out,"TURTLE"); 
+     System.out.println(".............................");
+     model2.write(System.out);
 
     }
 }
