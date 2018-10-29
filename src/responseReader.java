@@ -21,8 +21,8 @@ public class  responseReader extends Object {
         class, must be added to the class-path when running this and
         subsequent examples.
     */    
-//    static final String inputFileName  = "file_1.ttl";
-    static final String inputFileName  = "extractor2222response.ttl";
+    static final String inputFileName  = "file_1.ttl";
+//    static final String inputFileName  = "extractor2222response.ttl";
                               
     public static void main (String args[]) {
     	BasicConfigurator.configure();
@@ -44,31 +44,30 @@ public class  responseReader extends Object {
         
 //      to run in command line sparql.bat --data=vc-db-1.rdf --query=q1.rq               
         // write it to standard outString queryString = " .... " ;
-//		String queryString = 
-//				
-//			    "SELECT ?x ?name" +
-//			    "WHERE {" +
-//			    " ?x <http://www.w3.org/2001/vcard-rdf/3.0#FN> ?name " +
-//			    "      }";
-//			 
-//        Query query = QueryFactory.create(queryString) ;
-//         
-//        try (QueryExecution qexec = QueryExecutionFactory.create(query, model)) 
-//        {
-//        	
-//          ResultSet results = qexec.execSelect() ;
-//          for ( ; results.hasNext() ; )
-//          {
-//            QuerySolution soln = results.nextSolution() ;
-//            RDFNode x = soln.get("varName") ;       // Get a result variable by name.
-//            Resource r = soln.getResource("VarR") ; // Get a result variable - must be a resource
-//            Literal l = soln.getLiteral("VarL") ;   // Get a result variable - must be a literal
-//          }
-//        }
-        System.out.println("   Response after rdf read");
-     model.write(System.out,"TURTLE"); 
-     System.out.println(".............................");
-     model2.write(System.out);
+		String queryString = 
+				
+			    "Prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
+			    + " CONSTRUCT {?s ?p ?o}" +
+			    "WHERE {" +
+			    "  ?ss rdf:subject ?s." +" ?ss rdf:predicate ?p." +" ?ss rdf:object ?o." +
+			    "      }";
+			 
+        Query query = QueryFactory.create(queryString) ;
+         
+        try (QueryExecution qexec = QueryExecutionFactory.create(query, model)) 
+        {
+        	
+          Model results = qexec.execConstruct() ;
+       StmtIterator iter = results.listStatements();
+          while(iter.hasNext())
+          {
+           System.out.println(iter.next());
+          }
+        }
+//        System.out.println("   Response after rdf read");
+//     model.write(System.out,"TURTLE"); 
+//     System.out.println(".............................");
+//     model2.write(System.out,"TURTLE");
 
     }
 }
