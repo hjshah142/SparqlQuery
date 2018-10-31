@@ -1,5 +1,4 @@
 
-
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
@@ -13,7 +12,7 @@ import org.apache.log4j.BasicConfigurator;
 
 import java.io.*;
 
-public class  responseReader extends Object {
+public class   FoxSparqlQuery {
 
     /**
         NOTE that the file is loaded from the class-path and so requires that
@@ -59,6 +58,7 @@ public class  responseReader extends Object {
         	
           Model results = qexec.execConstruct() ;
        StmtIterator iter = results.listStatements();
+       System.out.println("......Extractor response after Query .....");
           while(iter.hasNext())
           {
            System.out.println(iter.next());
