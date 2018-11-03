@@ -48,8 +48,10 @@ public class   FoxSparqlQuery {
 			    "Prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
 			    + " CONSTRUCT {?s ?p ?o}" +
 			    "WHERE {" +
-			    "  ?ss rdf:subject ?s." +" ?ss rdf:predicate ?p." +" ?ss rdf:object ?o." +
+			    "  ?ss rdfs:label ?s."  +
 			    "      }";
+		
+		+" ?ss rdf:predicate ?p." +" ?ss rdf:object ?o."
 			 
         Query query = QueryFactory.create(queryString) ;
          

@@ -21,8 +21,8 @@ public class  responseReader extends Object {
         class, must be added to the class-path when running this and
         subsequent examples.
     */    
-//    static final String inputFileName  = "file_1.ttl";
-    static final String inputFileName  = "extractor2222response.ttl";
+    static final String inputFileName  = "file_1.ttl";
+//    static final String inputFileName  = "extractor2222response.ttl";
                               
     public static void main (String args[]) {
     	BasicConfigurator.configure();
@@ -53,21 +53,25 @@ public class  responseReader extends Object {
 			    "      }";
 			 
         Query query = QueryFactory.create(queryString) ;
+        String responseIs = null;
          
         try (QueryExecution qexec = QueryExecutionFactory.create(query, model)) 
         {
         	
           Model results = qexec.execConstruct() ;
        StmtIterator iter = results.listStatements();
+       System.out.println(results.toString());
           while(iter.hasNext())
           {
-           System.out.println(iter.next());
+       	  responseIs = iter.toString();
+           
           }
         }
 //        System.out.println("   Response after rdf read");
 //     model.write(System.out,"TURTLE"); 
 //     System.out.println(".............................");
 //     model2.write(System.out,"TURTLE");
+        System.out.println(responseIs);
 
     }
 }
