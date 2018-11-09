@@ -12,6 +12,9 @@ import org.apache.jena.util.FileManager;
 import org.apache.log4j.BasicConfigurator;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
 
 public class  responseReader extends Object {
 
@@ -22,6 +25,9 @@ public class  responseReader extends Object {
         subsequent examples.
     */    
     static final String inputFileName  = "file_1.ttl";
+    private static StringWriter modelAsString = new StringWriter();
+    static StringBuffer squery = new StringBuffer();
+
 //    static final String inputFileName  = "extractor2222response.ttl";
                               
     public static void main (String args[]) {
@@ -53,25 +59,33 @@ public class  responseReader extends Object {
 			    "      }";
 			 
         Query query = QueryFactory.create(queryString) ;
-        String responseIs = null;
+        List<String> responseIs = new ArrayList<String>();
          
         try (QueryExecution qexec = QueryExecutionFactory.create(query, model)) 
         {
         	
           Model results = qexec.execConstruct() ;
-       StmtIterator iter = results.listStatements();
-       System.out.println(results.toString());
+          StmtIterator iter = results.listStatements();
           while(iter.hasNext())
           {
-       	  responseIs = iter.toString();
-           
+        	  
+       	  squery.append(iter.next().toString()); 
+          squery.append(System.getProperty("line.separator"));
+       	  
           }
+//          ListIterator it = responseIs.listIterator();
+//          while(it.hasNext())
+//          { 
+//          System.out.println(it.next().toString());
+//          }
         }
+       
 //        System.out.println("   Response after rdf read");
 //     model.write(System.out,"TURTLE"); 
 //     System.out.println(".............................");
 //     model2.write(System.out,"TURTLE");
-        System.out.println(responseIs);
+//        System.out.println("result ");
+        System.out.println(squery);
 
     }
 }
