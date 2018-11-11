@@ -59,7 +59,7 @@ public class  responseReader extends Object {
 			    "      }";
 			 
         Query query = QueryFactory.create(queryString) ;
-        List<String> responseIs = new ArrayList<String>();
+
          
         try (QueryExecution qexec = QueryExecutionFactory.create(query, model)) 
         {
@@ -85,7 +85,8 @@ public class  responseReader extends Object {
 //     System.out.println(".............................");
 //     model2.write(System.out,"TURTLE");
 //        System.out.println("result ");
-        System.out.println(squery);
+        String sparql_result = squery.toString();
+        System.out.println(sparql_result);
 
     }
 }

@@ -1,0 +1,5 @@
+						    Prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+			     SELECT {?s ?p ?o}
+			    WHERE { 
+			      ?ss rdf:subject ?s. ?ss rdf:predicate ?p. ?ss rdf:object ?o.
+			          }
