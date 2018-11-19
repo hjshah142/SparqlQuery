@@ -1,1 +1,2 @@
+prefix :      <http://example.org/> .
 select ?Concept where {[] "object"  ?Concept} LIMIT 100

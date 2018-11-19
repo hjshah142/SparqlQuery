@@ -71,7 +71,7 @@ public class RDF_read extends Object {
 //            Literal l = soln.getLiteral("VarL") ;   // Get a result variable - must be a literal
           }
         }
-     model.write(System.out,"RDFXML"); 
+     model.write(System.out,"N-TRIPLES"); 
 
     }
 }
