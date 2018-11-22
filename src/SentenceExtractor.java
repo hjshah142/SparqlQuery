@@ -1,4 +1,4 @@
-package org.dice_research.sask.ensemble_ms.arff_generator;
+
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
