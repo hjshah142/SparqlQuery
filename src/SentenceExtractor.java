@@ -32,7 +32,7 @@ import org.apache.log4j.BasicConfigurator;
 
 public class SentenceExtractor {
 	
-
+ public static int b = 4;
 	private static File path = new File("oke data");
 	private static File[] files = path.listFiles();
 	private static List<String> sentences = new ArrayList<String>();
@@ -224,7 +224,7 @@ public class SentenceExtractor {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-
+	
 	}
 
 	// catch (Exception e)
@@ -350,6 +350,7 @@ public class SentenceExtractor {
 			
 			fileWriter.close();
 			System.out.println("File Created and closed");
+			
 	
 			
 		} catch (IOException e) 
