@@ -43,7 +43,7 @@ public class SentenceExtractor {
 
 	public static void main(String[] args) {
 		try {			fileWriter = new FileWriter(file);
-
+             b++;
 			BufferedWriter bw = new BufferedWriter(fileWriter);
 			// write in train data file for weka
 			bw.write("@relation DataExtraction2");

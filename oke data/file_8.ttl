@@ -16,7 +16,6 @@
         nif:beginIndex        "0"^^xsd:nonNegativeInteger , "141"^^xsd:nonNegativeInteger ;
         nif:endIndex          "166"^^xsd:nonNegativeInteger , "14"^^xsd:nonNegativeInteger , "157"^^xsd:nonNegativeInteger ;
         nif:isString          "Jenny McCarthy took it way back on Thursday, July 30, celebrating Throwback Thursday with an adorable photo of herself and her famous cousin Melissa McCarthy as kids." .
-        itsrdf:taClassRef     dbo:Person ;
         itsrdf:taIdentRef     dbr:Jenny_McCarthy , dbr:Melissa_McCarthy .
 
 [ a              oa:Annotation , rdf:Statement ;

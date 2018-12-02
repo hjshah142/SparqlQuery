@@ -4,17 +4,13 @@ import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.QueryFactory;
-import org.apache.jena.query.QuerySolution;
-import org.apache.jena.query.ResultSet;
-import org.apache.jena.query.ResultSetFormatter;
+
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.util.FileManager;
 import org.apache.log4j.BasicConfigurator;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ListIterator;
+
 
 public class  responseReader extends Object {
 
@@ -65,14 +61,22 @@ public class  responseReader extends Object {
         {
         	
           Model results = qexec.execConstruct() ;
-          StmtIterator iter = results.listStatements();
-          while(iter.hasNext())
-          {
-        	  
-       	  squery.append(iter.next().toString()); 
-          squery.append(System.getProperty("line.separator"));
-       	  
-          }
+          results.write(modelAsString,"N-TRIPLES");
+          
+//          StmtIterator iter = results.listStatements();
+          String a = modelAsString.toString();
+          modelAsString.toString();
+       	System.out.println(modelAsString.toString());
+       	
+       	
+       	
+//          while(iter.hasNext())
+//          {
+//        	  
+//       	  squery.append(iter.next().toString()); 
+//          squery.append(System.getProperty("line.separator"));
+//       	  
+//          }
 //          ListIterator it = responseIs.listIterator();
 //          while(it.hasNext())
 //          { 
@@ -85,8 +89,10 @@ public class  responseReader extends Object {
 //     System.out.println(".............................");
 //     model2.write(System.out,"TURTLE");
 //        System.out.println("result ");
-        String sparql_result = squery.toString();
-        System.out.println(sparql_result);
-
+//        String sparql_result = squery.toString();
+//        System.out.println(sparql_result);
+//        modelAsString.clear()
+        modelAsString.flush();
+        
     }
 }
