@@ -31,6 +31,10 @@ public class ResponseMatcher {
 		 sub.add("Sundar_Pichai");
 		 pred.add("workfor");
 		 obj.add("Google");
+		 sub.add("Google");
+		 pred.add("workfor");
+		 obj.add("bac");
+		 
 		System.out.println("List of Subjects in OKE files.........  ");
 		System.out.println(sub);
 		System.out.println("List of predicates  in OKE files.........  ");
@@ -67,7 +71,7 @@ public class ResponseMatcher {
 					{triple_counter++;}
 					if (sub.get(a).equals(sub_fox.get(b)))
 					{triple_counter++;}
-					if (sub.get(a).equals(sub_fox.get(b)))
+					if (pred.get(a).equals(pred_fox.get(b)))
 					{triple_counter++;}
 					if(triple_counter == 0)
 					{
@@ -90,12 +94,15 @@ public class ResponseMatcher {
 						truth = truth + 1;
 						
 					}
-					System.out.println("Value of truth " + truth);
+					System.out.println("Value of score " + truth);
 						
 					
 						
 				
 			}
+			
+			float result = truth/ size_fox;
+			System.out.println(result);
 		}
 	}
 
