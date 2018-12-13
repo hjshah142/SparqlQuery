@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ResponseMatcher {
@@ -16,24 +17,38 @@ public class ResponseMatcher {
 		List<String> sub = new ArrayList<String>();
 		List<String> obj = new ArrayList<String>();
 		List<String> pred = new ArrayList<String>();
-		int total_triples = sub.size();
-		 sub_fox.add("Google");
-		 pred_fox.add("CEO");
-		 obj_fox.add("Sundar_üichai");
-		 sub_fox.add("Google");
-		 pred_fox.add("CEO");
-		 obj_fox.add("Sundar_Pichai");
-		 sub_fox.add("Google");
-		 pred_fox.add("Ceo1");
-		 obj_fox.add("Sundar_üichai");
+//		 sub_fox.add("Google");
+//		 pred_fox.add("CEO");
+//		 obj_fox.add("Sundar_Pichai");
+//		 sub_fox.add("Google");
+//		 pred_fox.add("CEO");
+//		 obj_fox.add("Sundar_Pichai");
+//		 sub_fox.add("Google");
+//		 pred_fox.add("Ceo1");
+//		 obj_fox.add("Sundar_üichai");
 		 
 		//
-		 sub.add("Sundar_Pichai");
-		 pred.add("workfor");
-		 obj.add("Google");
-		 sub.add("Google");
-		 pred.add("workfor");
-		 obj.add("bac");
+//		 sub.add("Sundar_Pichai");
+//		 pred.add("workfor");
+//		 obj.add("Google");
+//		 
+//		 sub.add("Google");
+//		 pred.add("fires");
+//		 obj.add("Employee");
+//		 sub = Arrays.asList("Sundar_Pichai", "a", "James","Google");
+//		 pred = Arrays.asList("CEO","Employee", "worksfor","fires");
+//         obj = Arrays.asList("Google", "Google", "Sundar_Pichai","Empolyee");
+//		 sub_fox = Arrays.asList("Sundar_Pichai", "a", "James","Google");
+//		 pred_fox = Arrays.asList("CEO","Employee", "worksfor","fires");
+//		 obj_fox = Arrays.asList("Google", "Google", "Sundar_Pichai","Empolyee");
+		 sub_fox = Arrays.asList("Sundar_Pichai","a");
+		 pred_fox = Arrays.asList("CEO","d");
+         obj_fox = Arrays.asList("Google","c");
+		 sub = Arrays.asList("Sundar_Pichai","a");
+		 pred = Arrays.asList("CEO","d");
+		 obj = Arrays.asList("Google","c");
+		 
+	
 		 
 		System.out.println("List of Subjects in OKE files.........  ");
 		System.out.println(sub);
@@ -53,9 +68,10 @@ public class ResponseMatcher {
 		System.out.println(" ...........");
 
       
-		int size_fox = obj_fox.size();
+		int size_fox = pred_fox.size();
 		int size_oke = pred.size();
 		float truth = 0;
+		float result = 0;
 
 			
 			for (int a = 0; a < size_oke; a++) {
@@ -92,18 +108,22 @@ public class ResponseMatcher {
 					{
 						System.out.println("three  match found");
 						truth = truth + 1;
+//						size_fox= size_fox - 1;
 						
 					}
 					System.out.println("Value of score " + truth);
-						
-					
+				
 						
 				
 			}
 			
-			float result = truth/ size_fox;
+			result = truth   ;
 			System.out.println(result);
 		}
+			float score = (result/size_oke) *100;
+			System.out.println("Extractor score for this sentence " + score );	
+	
+			
 	}
 
 }
