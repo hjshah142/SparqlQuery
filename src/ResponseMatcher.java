@@ -17,21 +17,24 @@ public class ResponseMatcher {
 		List<String> sub = new ArrayList<String>();
 		List<String> obj = new ArrayList<String>();
 		List<String> pred = new ArrayList<String>();
-//		 sub_fox.add("Google");
-//		 pred_fox.add("CEO");
-//		 obj_fox.add("Sundar_Pichai");
-//		 sub_fox.add("Google");
-//		 pred_fox.add("CEO");
-//		 obj_fox.add("Sundar_Pichai");
+		 sub_fox.add("Google");
+		 pred_fox.add("CEO");
+		 obj_fox.add("Sundar_Pichai");
+		 sub_fox.add("Google");
+		 pred_fox.add("located");
+		 obj_fox.add("California");
 //		 sub_fox.add("Google");
 //		 pred_fox.add("Ceo1");
 //		 obj_fox.add("Sundar_üichai");
 		 
 		//
+		 sub.add("Google");
+		 pred.add("CEO");
+		 obj.add("Sundar_Pichai");
 //		 sub.add("Sundar_Pichai");
 //		 pred.add("workfor");
 //		 obj.add("Google");
-//		 
+		 
 //		 sub.add("Google");
 //		 pred.add("fires");
 //		 obj.add("Employee");
@@ -41,15 +44,13 @@ public class ResponseMatcher {
 //		 sub_fox = Arrays.asList("Sundar_Pichai", "a", "James","Google");
 //		 pred_fox = Arrays.asList("CEO","Employee", "worksfor","fires");
 //		 obj_fox = Arrays.asList("Google", "Google", "Sundar_Pichai","Empolyee");
-		 sub_fox = Arrays.asList("Sundar_Pichai","a");
-		 pred_fox = Arrays.asList("CEO","d");
-         obj_fox = Arrays.asList("Google","c");
-		 sub = Arrays.asList("Sundar_Pichai","a");
-		 pred = Arrays.asList("CEO","d");
-		 obj = Arrays.asList("Google","c");
-		 
-	
-		 
+//		 sub_fox = Arrays.asList("Sundar_Pichai","a");
+//		 pred_fox = Arrays.asList("CEO","d");
+//         obj_fox = Arrays.asList("Google","c");
+//		 sub = Arrays.asList("Sundar_Pichai","a");
+//		 pred = Arrays.asList("CEO","d");
+//		 obj = Arrays.asList("Google","c");
+
 		System.out.println("List of Subjects in OKE files.........  ");
 		System.out.println(sub);
 		System.out.println("List of predicates  in OKE files.........  ");
@@ -117,7 +118,7 @@ public class ResponseMatcher {
 				
 			}
 			
-			result = truth   ;
+			result = truth/size_fox   ;
 			System.out.println(result);
 		}
 			float score = (result/size_oke) *100;
