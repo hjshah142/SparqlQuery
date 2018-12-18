@@ -14,41 +14,16 @@ public class ResponseMatcher {
 	public static void main(String[] args) {
             ResponseMatcher obj1 = new ResponseMatcher();
             obj1.response_Matching();
+    		obj1.sub_fox.clear();
+    		obj1.obj_fox.clear();
+    		obj1.pred_fox.clear();
+    		obj1.sub.clear();
+    		obj1.obj.clear();
+    		obj1.pred.clear();
             
 	}
 	public double response_Matching() 
 	{
-
-		 sub_fox.add("Google");
-		 pred_fox.add("CE");
-		 obj_fox.add("Sundar_Pichai");
-		 sub_fox.add("Google");
-		 pred_fox.add("located");
-		 obj_fox.add("California");
-		 sub_fox.add("Google");
-		 pred_fox.add("CEO");
-		 obj_fox.add("Sundar_Pichai");
-		 
-		 sub.add("Google");
-		 pred.add("located");
-		 obj.add("California");
-
-		 sub.add("Google");
-		 pred.add("CEO");
-		 obj.add("Sundar_Pichai");
-
-//		 sub = Arrays.asList("Sundar_Pichai", "a", "James","Google");
-//		 pred = Arrays.asList("CEO","Employee", "worksfor","fires");
-//         obj = Arrays.asList("Google", "Google", "Sundar_Pichai","Empolyee");
-//		 sub_fox = Arrays.asList("Sundar_Pichai", "a", "James","Google");
-//		 pred_fox = Arrays.asList("CEO","Employee", "worksfor","fires");
-//		 obj_fox = Arrays.asList("Google", "Google", "Sundar_Pichai","Empolyee");
-//		 sub_fox = Arrays.asList("Sundar_Pichai","a");
-//		 pred_fox = Arrays.asList("CEO","d");
-//         obj_fox = Arrays.asList("Google","c");
-//		 sub = Arrays.asList("Sundar_Pichai","a");
-//		 pred = Arrays.asList("CEO","d");
-//		 obj = Arrays.asList("Google","c");
 
 		System.out.println("List of Subjects in OKE files.........  ");
 		System.out.println(sub);
@@ -100,7 +75,7 @@ public class ResponseMatcher {
 
 					
 				}
-			System.out.println("maximum number of Matthes");
+			System.out.println("maximum number of Matches");
 			System.out.println(max);
 			score = (double)(score + (max/3)) ;
             max = 0;
@@ -111,6 +86,12 @@ public class ResponseMatcher {
 			System.out.println("total score in percentage");
 			result = (score/size_oke)*100;
 			System.out.println(result);
+    	sub_fox.clear();
+    	obj_fox.clear();
+        pred_fox.clear();
+    	sub.clear();
+        obj.clear();
+        pred.clear();
 			return result;
 			
 	}
