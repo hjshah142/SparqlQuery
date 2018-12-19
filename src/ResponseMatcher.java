@@ -10,18 +10,6 @@ public class ResponseMatcher {
 	List<String> sub = new ArrayList<String>();
 	List<String> obj = new ArrayList<String>();
 	List<String> pred = new ArrayList<String>();
-
-	public static void main(String[] args) {
-            ResponseMatcher obj1 = new ResponseMatcher();
-            obj1.response_Matching();
-    		obj1.sub_fox.clear();
-    		obj1.obj_fox.clear();
-    		obj1.pred_fox.clear();
-    		obj1.sub.clear();
-    		obj1.obj.clear();
-    		obj1.pred.clear();
-            
-	}
 	public double response_Matching() 
 	{
 
@@ -92,8 +80,9 @@ public class ResponseMatcher {
     	sub.clear();
         obj.clear();
         pred.clear();
-			return result;
+		return result;
 			
 	}
+
 
 }
