@@ -12,8 +12,19 @@ public class ResponseMatcher {
 	List<String> pred = new ArrayList<String>();
 	public double response_Matching() 
 	{
-
-		System.out.println("List of Subjects in OKE files.........  ");
+		int size_fox = pred_fox.size();
+		int size_oke = pred.size();
+		double score = 0;
+		double result = 0;
+		double max = 0;
+		if(size_fox == 0)
+		{
+			System.out.println("no triples found");
+			result = 0;
+			return 0;
+		}
+		else 
+		{     		System.out.println("List of Subjects in OKE files.........  ");
 		System.out.println(sub);
 		System.out.println("List of predicates  in OKE files.........  ");
 		System.out.println(pred);
@@ -29,13 +40,6 @@ public class ResponseMatcher {
 		System.out.println("List of Objects.........  ");
 		System.out.println(obj_fox);
 		System.out.println(" ...........");
-
-      
-		int size_fox = pred_fox.size();
-		int size_oke = pred.size();
-		double score = 0;
-		double result = 0;
-		double max = 0;
 		
 
 			
@@ -81,6 +85,7 @@ public class ResponseMatcher {
         obj.clear();
         pred.clear();
 		return result;
+		}
 			
 	}
 
