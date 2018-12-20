@@ -110,7 +110,7 @@ public class TestResponseMatcher {
 						System.out.println(actual_score5 + "score ");
 						Assert.assertEquals(actual_score5, 33.33, 1);
 						
-//						 test 5
+//						 test 6
 						System.out.println("........... test 6.......");
 					
 					
@@ -143,6 +143,91 @@ public class TestResponseMatcher {
 							System.out.println(actual_score6 + "score ");
 							Assert.assertEquals(actual_score6, 66, 1);
 						
+//							 test 7
+							System.out.println("........... test 7.......");
+						
+						
+							 test_obj.sub.add("Google");
+							 test_obj.pred.add("located");
+							 test_obj.obj.add("cal");
+							 
+							 test_obj.sub.add("Sundar");
+							 test_obj.pred.add("worksin");
+							 test_obj.obj.add("Google");
+							 
+							 test_obj.sub_fox.add("Sundar");
+							 test_obj.pred_fox.add("ceo");
+							 test_obj.obj_fox.add("Google");
+							 
+							 test_obj.sub_fox.add("Microsoft");
+							 test_obj.pred_fox.add("CEO");
+							 test_obj.obj_fox.add("Sundar_Pichai");
+							 
+							 test_obj.sub_fox.add("Sundar");
+							 test_obj.pred_fox.add("worksin");
+							 test_obj.obj_fox.add("Google");
+							 
+							 test_obj.sub_fox.add("Sundar");
+							 test_obj.pred_fox.add("worksin");
+							 test_obj.obj_fox.add("Google");
+					 
+							 test_obj.sub_fox.add("Google");
+							 test_obj.pred_fox.add("locatedin");
+							 test_obj.obj_fox.add("cal");
+							 
+							 
+								double actual_score7 =test_obj.response_Matching();
+								System.out.println(actual_score7 + "score ");
+//								Assert.assertEquals(actual_score6, 66, 1);
+													
+//								 test 8
+								System.out.println("........... test 8.......");
+							
+							
+								 test_obj.sub.add("Google");
+								 test_obj.pred.add("located");
+								 test_obj.obj.add("cal");
+								 
+								 test_obj.sub.add("Sundar");
+								 test_obj.pred.add("worksin");
+								 test_obj.obj.add("Google");
+								 
+								 
+								 test_obj.sub.add("James_Demore");
+								 test_obj.pred.add("fires");
+								 test_obj.obj.add("Google");
+								 
+								 test_obj.sub_fox.add("Sundar");
+								 test_obj.pred_fox.add("ceo");
+								 test_obj.obj_fox.add("Google");
+								 
+								 test_obj.sub_fox.add("Microsoft");
+								 test_obj.pred_fox.add("CEO");
+								 test_obj.obj_fox.add("Sundar_Pichai");
+								 
+								 test_obj.sub_fox.add("Sundar");
+								 test_obj.pred_fox.add("worksin");
+								 test_obj.obj_fox.add("Google");
+								 
+								 test_obj.sub_fox.add("Sundar");
+								 test_obj.pred_fox.add("worksin");
+								 test_obj.obj_fox.add("Google");
+						 
+								 test_obj.sub_fox.add("Google");
+								 test_obj.pred_fox.add("locatedin");
+								 test_obj.obj_fox.add("cal");
+								 
+								 
+								 test_obj.sub_fox.add("Google");
+								 test_obj.pred_fox.add("region");
+								 test_obj.obj_fox.add("cal");
+								 
+								 
+								 
+								 
+									double actual_score8 =test_obj.response_Matching();
+									System.out.println(actual_score8 + "score ");						
+							
 					
 		
 	}
