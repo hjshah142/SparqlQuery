@@ -77,13 +77,15 @@ public class ResponseMatcher {
 			System.out.println(score);
 			System.out.println("total score in percentage");
 			result = (score/size_oke)*100;
-			System.out.println(result);
+	
     	sub_fox.clear();
     	obj_fox.clear();
         pred_fox.clear();
     	sub.clear();
         obj.clear();
         pred.clear();
+        result = Math.round(result * 100.0) / 100.0;
+    	System.out.println(result);
 		return result;
 		}
 			
