@@ -346,6 +346,160 @@ public class TestResponseMatcher {
 											double actual_score10 =test_obj.response_Matching();
 											System.out.println(actual_score10 + "score ");	
 											
+//											 test 11
+											System.out.println("........... test 11.......");
+										
+										
+											 test_obj.sub.add("Germany");
+											 test_obj.pred.add("capital");
+											 test_obj.obj.add("Berlin");
+											 
+         									 test_obj.sub.add("Germany");
+											 test_obj.pred.add("in");
+											 test_obj.obj.add("Europe");
+											 
+											 test_obj.sub.add("Europe");
+											 test_obj.pred.add("country");
+											 test_obj.obj.add("Germany");
+											 
+											 test_obj.sub.add("Germany");
+											 test_obj.pred.add("city");
+											 test_obj.obj.add("Frankfurt");
+											 
+											 test_obj.sub_fox.add("Germany");
+											 test_obj.pred_fox.add("city");
+											 test_obj.obj_fox.add("Berlin");
+											 
+											 test_obj.sub_fox.add("Deutchland");
+											 test_obj.pred_fox.add("capital");
+											 test_obj.obj_fox.add(".");
+											 
+											 test_obj.sub_fox.add("Deutchland");
+											 test_obj.pred_fox.add("capital");
+											 test_obj.obj_fox.add("nolabel");
+											 
+											 test_obj.sub_fox.add("Deutchland");
+											 test_obj.pred_fox.add("in");
+											 test_obj.obj_fox.add("nolabel");
+											 
+											 
+
+									 
+											 test_obj.sub_fox.add("Google");
+											 test_obj.pred_fox.add("locatedin");
+											 test_obj.obj_fox.add("cal");
+											 
+											 
+											 test_obj.sub_fox.add("nolabel");
+											 test_obj.pred_fox.add("region");
+											 test_obj.obj_fox.add("Europe");
+											 
+											 
+											 test_obj.sub_fox.add("Germany");
+											 test_obj.pred_fox.add("region");
+											 test_obj.obj_fox.add("Europe");
+											 
+											 
+											 
+											 
+											 
+												double actual_score11 =test_obj.response_Matching();
+												System.out.println(actual_score11 + "score ");	
+												
+												
+												
+//												 test 12
+												System.out.println("........... test 12.......");
+											
+											
+												 test_obj.sub.add("Germany");
+												 test_obj.pred.add("capital");
+												 test_obj.obj.add("Berlin");
+												 
+	         									 test_obj.sub.add("Deutschland");
+												 test_obj.pred.add("in");
+												 test_obj.obj.add("Europe");
+												 
+												 test_obj.sub.add("Europe");
+												 test_obj.pred.add("country");
+												 test_obj.obj.add("Germany");
+												 
+												 test_obj.sub.add("Germany");
+												 test_obj.pred.add("city");
+												 test_obj.obj.add("Frankfurt");
+												 
+												 test_obj.sub_fox.add("Germany");
+												 test_obj.pred_fox.add("city");
+												 test_obj.obj_fox.add("Berlin");
+
+												 
+												 
+												 test_obj.sub_fox.add("Germany");
+												 test_obj.pred_fox.add("region");
+												 test_obj.obj_fox.add("Europe");
+												 
+												 
+												 
+												 
+												 
+													double actual_score12 =test_obj.response_Matching();
+													System.out.println(actual_score12 + "score ");	
+													
+													
+//													 test 13
+													System.out.println("........... test 13.......");
+												
+												
+													 test_obj.sub.add("Germany");
+													 test_obj.pred.add("capital");
+													 test_obj.obj.add("Berlin");
+
+													 test_obj.sub.add("Europe");
+													 test_obj.pred.add("country");
+													 test_obj.obj.add("Germany");
+													 
+													 test_obj.sub.add("Germany");
+													 test_obj.pred.add("city");
+													 test_obj.obj.add("Frankfurt");
+													 
+													 test_obj.sub_fox.add("Germany");
+													 test_obj.pred_fox.add("nolabel");
+													 test_obj.obj_fox.add("country");
+                                                     
+													 
+													 test_obj.sub_fox.add("Germany");
+													 test_obj.pred_fox.add("to");
+													 test_obj.obj_fox.add("abc");
+													 
+													 
+													 test_obj.sub_fox.add("Germany");
+													 test_obj.pred_fox.add("city");
+													 test_obj.obj_fox.add("Berlin");
+													 
+													 
+													 test_obj.sub_fox.add("Germany");
+													 test_obj.pred_fox.add("play");
+													 test_obj.obj_fox.add("nolabel");
+													 
+													 
+													 test_obj.sub_fox.add("Germany");
+													 test_obj.pred_fox.add("in");
+													 test_obj.obj_fox.add("Europe");
+													 
+													 test_obj.sub_fox.add("country");
+													 test_obj.pred_fox.add("place");
+													 test_obj.obj_fox.add("Europe");
+													 
+													 
+													 
+													 
+														double actual_score13 =test_obj.response_Matching();
+														System.out.println(actual_score13 + "score ");	
+														
+												
+											
+			
+											
 
 								
 						
