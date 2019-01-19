@@ -1,0 +1,7 @@
+@relation testdata
+@attribute Sentences String
+@attribute best_extractor {0,1,2}
+@data
+'dqfqfqvef3vrefg ',?
+'sfwege egb eb er',?
+'wffqewfg er erb rb fb',?
